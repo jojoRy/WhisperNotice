@@ -1,9 +1,9 @@
-name: JBroadcast
-main: kr.jjory.jbroadcast.JBroadcast
+name: WhisperNotice
+main: kr.jjory.whispernotice.WhisperNotice
 version: 1.0.0
 api-version: 1.13
 author: jjory
-website: https://github.com/jojoRy/Nickname
+website: https://github.com/jojoRy/WhisperNotice
 
 commands:
   공지:
@@ -13,3 +13,9 @@ commands:
   공지변환:
     description: config.yml을 수정후 리로드 합니다.
     permission: op
+  귓속말:
+    description: 귓속말을 보냅니다.
+  귓속:
+    description: 귓속말을 보냅니다.
+  귓:
+    description: 귓속말을 보냅니다.

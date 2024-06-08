@@ -1,15 +1,15 @@
-package kr.jjory.jbroadcast.command;
+package kr.jjory.whispernotice.command;
 
-import kr.jjory.jbroadcast.JBroadcast;
+import kr.jjory.whispernotice.WhisperNotice;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class JoinBroadcastConvertCommand implements CommandExecutor {
 
-    private final JBroadcast plugin;
+    private final WhisperNotice plugin;
 
-    public JoinBroadcastConvertCommand(JBroadcast plugin) {
+    public JoinBroadcastConvertCommand(WhisperNotice plugin) {
         this.plugin = plugin;
     }
 

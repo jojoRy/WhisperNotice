@@ -1,1 +1,1 @@
-rootProject.name = "JBroadcast"
+rootProject.name = "WhisperNotice"

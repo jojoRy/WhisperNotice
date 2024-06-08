@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "kr.jjory.jbroadcast"
+group = "kr.jjory.whispernotice"
 version = "1.0.0"
 
 repositories {

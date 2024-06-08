@@ -1,4 +1,4 @@
-package kr.jjory.jbroadcast.command;
+package kr.jjory.whispernotice.command;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
