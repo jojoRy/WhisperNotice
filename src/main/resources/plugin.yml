@@ -1,0 +1,15 @@
+name: JBroadcast
+main: kr.jjory.jbroadcast.JBroadcast
+version: 1.0.0
+api-version: 1.13
+author: jjory
+website: https://github.com/jojoRy/Nickname
+
+commands:
+  공지:
+    description: 모든 플레이어에게 공지를 보냅니다.
+    permission: op
+    aliases: [broadcast]
+  공지변환:
+    description: config.yml을 수정후 리로드 합니다.
+    permission: op
