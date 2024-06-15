@@ -15,7 +15,7 @@ commands:
     permission: op
   귓속말:
     description: 귓속말을 보냅니다.
-  귓속:
-    description: 귓속말을 보냅니다.
-  귓:
-    description: 귓속말을 보냅니다.
+    aliases: [귓, 귓속, w, ㅈ]
+  답장:
+    description: 답장을 보냅니다.
+    aliases: [r, ㄱ, 답]

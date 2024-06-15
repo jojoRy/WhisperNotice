@@ -1,4 +1,4 @@
-package kr.jjory.whispernotice.event;
+package kr.jjory.whispernotice.listeners;
 
 import kr.jjory.whispernotice.WhisperNotice;
 import org.bukkit.ChatColor;

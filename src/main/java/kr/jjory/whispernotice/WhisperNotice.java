@@ -3,10 +3,13 @@ package kr.jjory.whispernotice;
 import kr.jjory.whispernotice.command.BroadcastCommand;
 import kr.jjory.whispernotice.command.JoinBroadcastConvertCommand;
 import kr.jjory.whispernotice.command.WhisperCommand;
-import kr.jjory.whispernotice.event.PlayerJoinListener;
+import kr.jjory.whispernotice.command.ReplyCommand;
+import kr.jjory.whispernotice.listeners.PlayerJoinListener;
+import kr.jjory.whispernotice.listeners.PlayerQuitListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class WhisperNotice extends JavaPlugin {
+
     private PlayerJoinListener playerJoinListener;
 
     @Override
@@ -20,13 +23,14 @@ public class WhisperNotice extends JavaPlugin {
         // Register the /리로드 command
         this.getCommand("공지변환").setExecutor(new JoinBroadcastConvertCommand(this));
 
-        this.getCommand("귓").setExecutor(new WhisperCommand());
-        this.getCommand("귓말").setExecutor(new WhisperCommand());
         this.getCommand("귓속말").setExecutor(new WhisperCommand());
+
+        this.getCommand("답장").setExecutor(new ReplyCommand());
 
         // Register event listeners
         playerJoinListener = new PlayerJoinListener(this);
         getServer().getPluginManager().registerEvents(playerJoinListener, this);
+        getServer().getPluginManager().registerEvents(new PlayerQuitListener(), this);
 
         getLogger().info("WhisperNotice 플러그인이 활성화되었습니다.");
     }
