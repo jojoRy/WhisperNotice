@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/WhisperNotice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/WhisperNotice.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.jjory.whispernotice.WhisperNotice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.jjory.whispernotice.WhisperNotice.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugintest.WhisperNotice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plugintest.WhisperNotice.main.iml" />
     </modules>
   </component>
 </project>

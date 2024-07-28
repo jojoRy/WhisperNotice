@@ -1,9 +1,6 @@
 package kr.jjory.whispernotice;
 
-import kr.jjory.whispernotice.command.BroadcastCommand;
-import kr.jjory.whispernotice.command.JoinBroadcastConvertCommand;
-import kr.jjory.whispernotice.command.WhisperCommand;
-import kr.jjory.whispernotice.command.ReplyCommand;
+import kr.jjory.whispernotice.command.*;
 import kr.jjory.whispernotice.listeners.PlayerJoinListener;
 import kr.jjory.whispernotice.listeners.PlayerQuitListener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,7 +21,7 @@ public class WhisperNotice extends JavaPlugin {
         this.getCommand("공지변환").setExecutor(new JoinBroadcastConvertCommand(this));
 
         this.getCommand("귓속말").setExecutor(new WhisperCommand());
-
+        this.getCommand("귓속말").setTabCompleter(new CommandCompleter());
         this.getCommand("답장").setExecutor(new ReplyCommand());
 
         // Register event listeners
