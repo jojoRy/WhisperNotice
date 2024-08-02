@@ -8,14 +8,23 @@ website: https://github.com/jojoRy/WhisperNotice
 commands:
   공지:
     description: 모든 플레이어에게 공지를 보냅니다.
-    permission: op
+    permission: whispernotice.broadcast
     aliases: [broadcast]
   공지변환:
     description: config.yml을 수정후 리로드 합니다.
-    permission: op
+    permission: whispernotice.broadcast
   귓속말:
     description: 귓속말을 보냅니다.
     aliases: [귓, 귓속, w, ㅈ]
   답장:
     description: 답장을 보냅니다.
     aliases: [r, ㄱ, 답]
+  닉네임변경:
+    description: 플레이어의 닉네임을 변경
+    permission: whispernotice.nickname
+  닉네임제거:
+    description: 플레이어의 닉네임 변경을 제거합니다.
+    permission: whispernotice.nickname
+  칭호:
+    description: 플레이어의 닉네임 변경을 제거합니다.
+    permission: whispernotice.prefix

@@ -1,5 +1,8 @@
 package kr.jjory.whispernotice.listeners;
 
+import kr.jjory.whispernotice.NicknameManager;
+import kr.jjory.whispernotice.WhisperNotice;
+import kr.jjory.whispernotice.enums.Format;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -8,6 +11,14 @@ import org.bukkit.metadata.MetadataValue;
 
 
 public class PlayerQuitListener implements Listener {
+
+    private final WhisperNotice plugin;
+    private final NicknameManager nicknameManager;
+
+    public PlayerQuitListener(WhisperNotice plugin, NicknameManager nicknameManager) {
+        this.plugin = plugin;
+        this.nicknameManager = nicknameManager;
+    }
 
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
@@ -22,9 +33,11 @@ public class PlayerQuitListener implements Listener {
             if (onlinePlayer.hasMetadata("lastMessageTarget")) {
                 MetadataValue metadataValue = onlinePlayer.getMetadata("lastMessageTarget").get(0);
                 if (metadataValue.value() != null && metadataValue.value().equals(player)) {
-                    onlinePlayer.removeMetadata("lastMessageTarget", player.getServer().getPluginManager().getPlugin("WhisperNotice"));
+                    onlinePlayer.removeMetadata("lastMessageTarget", plugin);
                 }
             }
         }
+        String quitMessage = Format.QUIT.getMessage(nicknameManager.getNickname(player));
+        event.setQuitMessage(quitMessage);
     }
 }
